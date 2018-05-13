@@ -42,6 +42,12 @@
     <ClInclude Include="Utils.h">
       <Filter>Blackjack\H</Filter>
     </ClInclude>
+    <ClInclude Include="Population.h">
+      <Filter>GA\H</Filter>
+    </ClInclude>
+    <ClInclude Include="GA.h">
+      <Filter>GA\H</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp">
@@ -61,6 +67,12 @@
     </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="GA.cpp">
+      <Filter>GA\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Population.cpp">
+      <Filter>GA\CPP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
