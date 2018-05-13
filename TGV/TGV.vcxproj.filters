@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Blackjack">
+      <UniqueIdentifier>{6e32714d-007f-4a5f-a577-9ef9b57fed85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blackjack\CPP">
+      <UniqueIdentifier>{347aa7bb-087f-435b-876b-c39ef81df67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blackjack\H">
+      <UniqueIdentifier>{d95ed7dc-42a9-4948-a59f-a87c5dc3331f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GA">
+      <UniqueIdentifier>{006b984b-d5c3-448e-a410-1cdd072ead13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GA\CPP">
+      <UniqueIdentifier>{f12778f6-81a0-4792-ae4c-b7cbe2ca3b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GA\H">
+      <UniqueIdentifier>{f1450f57-95bf-4780-b7fa-e9765b9b8b88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Card.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+    <ClInclude Include="Strategy.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Blackjack\H</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Card.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Strategy.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Blackjack\CPP</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
