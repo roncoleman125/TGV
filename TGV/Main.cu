@@ -1,6 +1,9 @@
 
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
+//#include <unistd.h>
+#include <curand.h>
+#include <curand_kernel.h>
 
 #include <stdio.h>
 
@@ -12,7 +15,48 @@ __global__ void addKernel(int *c, const int *a, const int *b)
     c[i] = a[i] + b[i];
 }
 
-int main()
+#define MAX 100
+
+__global__ void random(int* result) {
+	curandState_t state;
+
+	curand_init(0, 0, 0, &state);
+
+	*result = curand(&state) % MAX;
+}
+
+int test12();
+
+#ifdef __CUDACC__
+#define KERNEL_ARGS2(grid, block) <<<grid, block>>>
+#endif
+
+#define HEY random<<<1, 1 >>>(gpu_x);
+
+int main() {
+	test12();
+
+	int* gpu_x;
+	cudaMalloc((void**)&gpu_x, sizeof(int));
+
+//	curandState_t state;
+
+//	curand_init(0, 0, 0, &state);
+
+	random<<<1, 1 >>>(gpu_x);
+	//random KERNEL_ARGS2(1, 1) (gpu_x);
+
+	int x;
+	cudaMemcpy(&x, gpu_x, sizeof(int), cudaMemcpyDeviceToHost);
+
+	printf("Random number = %d.\n", x);
+
+	return 0;
+}
+
+
+
+int test12()
 {
     const int arraySize = 5;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };

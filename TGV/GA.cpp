@@ -1,6 +1,7 @@
 #include "GA.h" 
-#include "../Bj/Strategy.h"
+#include "Strategy.h"
 #include "Population.h"
+
 
 Strategy cross(Strategy* a, Strategy* b) {
 	Strategy c = Strategy_();
